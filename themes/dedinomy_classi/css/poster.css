@@ -1,0 +1,22 @@
+@charset "utf-8";
+.poster {
+	color:black;
+	font-weight:bold;
+	background-color:transparent;
+}
+form {
+	text-align:center;
+	font-weight:bold;
+}
+.ok {
+	color:#0C3;
+	font-weight:bold;
+}
+.maintenance {
+	color:#000000;
+	font-weight:bold;
+}
+.error
+{
+	color:red;
+}
