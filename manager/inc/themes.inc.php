@@ -40,10 +40,9 @@ Security::is_admin();?>
                         fclose($fp);
                         if ($item!=$settings->theme)
                         {
-                            echo '<a class="button" href="?pcat=themes&activate='.$item.'">Selectionner</a>';
+                            echo '<a class="button" href="?pcat=themes&activate='.$item.'">Sélectionner</a>';
                         }
-                        echo ' <a class="button" href="?pcat=themes_editor&theme='.$item.'">Editer</a>';
-                        echo '</p>';
+                        echo ' <a class="button" href="?pcat=themes_editor&theme='.$item.'">Éditer</a>';
                         echo '</div>';
                     }
                 }
@@ -54,6 +53,6 @@ Security::is_admin();?>
 	</div>				
 </div>
 <div class="doc-section" id="attribution">
-	<p class="remove-bottom"><small>DédiNomy, un script de <a href="http://manager.nubox.fr" target="_blank">NuBOX</a>© 2008-<?php echo date('Y'); ?><br />
+	<p class="remove-bottom"><small>DédiNomy, un script de <a href="http://manager.nubox.fr" target="_blank">NuBOX</a>© 2008-<?php echo date('Y');?><br />
 	Le design est le fruit du travail de <a href="http://twitter.com/#!/blogosite" target="_blank">#blogosite</a> & <a href="http://twitter.com/#!/nubox_dev" target="_blank">#nubox_dev</a>. Toute reproduction, même partielle, est interdite sans l'autorisation de son auteur. Pour toutes questions, ou suggestions, connectez-vous au forum NuBOX - <a href="http://forum.nubox.fr" target="_blank">forum.nubox.fr</a></small></p>
     </div>
