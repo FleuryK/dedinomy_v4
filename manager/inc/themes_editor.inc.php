@@ -1,6 +1,6 @@
 <?php if (!defined('SCR_NAME')) exit('No direct script access allowed');
 Security::is_admin();
-$ext_autorise = array('.tpl', '.txt', '.html', '.css','.js');
+$ext_autorise = array('.tpl', '.txt', '.html', '.css', '.js');
 $theme=(isset($_GET['theme']))?$_GET['theme']:'';
 $folder= "../themes/".$theme."";
 function Save($folder)
@@ -122,5 +122,5 @@ if(isset($_POST['update']))
 		LoadHtml($folder);
 		?>
 		</ul>
-		<input type="submit" name="update" class="button" value="Mettre à jour le thème">
+		<input type="submit" name="update" class="button" value="Mettre à jour le thème" />
 	</form>
