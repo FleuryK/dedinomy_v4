@@ -41,11 +41,11 @@ Security::is_admin();?>
 if (isset($message)) echo $message; echo'
 <form action="" method="post">
 	<label>Login / Pseudo :</label>
-	<input type="text" name="pseudo_adm" value="'.$user->login.'" required=required/>
+	<input type="text" name="pseudo_adm" value="'.$user->login.'" required=required />
 	<label>Nouveau Mot de passe :</label>
-	<input type="password" name="pass_md5" value="" required=required/>
+	<input type="password" name="pass_md5" value="" required=required />
 	<label>Confirmation du mot de passe :</label>
-	<input type="password" name="pass_confirm" value="" required=required/>
+	<input type="password" name="pass_confirm" value="" required=required />
 	<input type="hidden" name="id_user" value="'.$user->id.'" />
 <legend>Rôle de l\'utilisateur :</legend>
 <label for="regularRadio">
@@ -58,5 +58,5 @@ if (isset($message)) echo $message; echo'
 </label>
 <br/>
 <input type="hidden" name="submit" value="Submit" />
-<input type="submit" name="submit" value="Mettre à jour"/>
+<input type="submit" name="submit" value="Mettre à jour" />
 </form>';
