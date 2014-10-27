@@ -33,7 +33,7 @@ if (isset($_POST['newip']))
 	else
 	{
 		echo  $error = '<div style="width:650px;" class="error message">
-			<h3 style="color:white">OhOhOH - Erreur</h3>
+			<h3 style="color:white">OhOhOh - Erreur</h3>
 			<p>Tous les champs sont obligatoires !</p>
 			</div>';
 	}
