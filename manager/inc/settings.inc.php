@@ -17,7 +17,7 @@ if (isset($message)) echo '
 		<div class="five columns alpha">
 			<br />
 			<h4>Paramètres du script</h4>
-			<hr class="large"/>
+			<hr class="large" />
 			Vous pouvez modifier l'url d'accès à Dédinomy <strong>seulement, et seulement si</strong> vous êtes sûr de ce que vous faîtes. Nous avons détecté l'url suivante : <em style="color:grey">http://<?php echo $_SERVER["HTTP_HOST"].dirname(dirname($_SERVER["PHP_SELF"]));?></em>
 			<input style="margin-top:10px;" type="url" size="30" name="adr_scr" value="<?php if (isset($_POST['adr_scr'])) echo $_POST['adr_scr']; else echo $settings->adr_dedi;?>" required=required />
 			<strong>Nom de Votre Site :</strong>
@@ -26,7 +26,7 @@ if (isset($message)) echo '
 			<div class="doc-section" id="mediaQueries"></div>
 			<br />
 			<h4>Formulaire d'envoi</h4>
-			<hr class="large"/>
+			<hr class="large" />
 			<fieldset>
 				<legend>Publication des nouvelles dédicaces</legend>
 				<label for="regularRadio">
@@ -57,14 +57,14 @@ if (isset($message)) echo '
 			<input type="text" size="30" name="moderation" value="<?php if(isset($_POST['moderation'])) echo $_POST['moderation']; else echo $settings->moderation;?>" required=required />
 			<br />
 			<h4>Administration</h4>
-			<hr class="large"/>
+			<hr class="large" />
 			<strong>Éléments affichées par page</strong><br />
 			<input type="text" size="30" name="adm_nb_page" value="<?php if (isset($_POST['adm_nb_page'])) echo $_POST['admin_nb_page']; else echo $settings->adm_nb_page;?>" required=required pattern="[0-9]{1,5}" />
 		</div>
 		<div class="six columns omega">
 			<br />
 			<h4>Gestion Mail</h4>
-			<hr class="large"/>
+			<hr class="large" />
 			<strong>E-Mail de l'administrateur du site</strong><br />
 			<input type="email" size="30" name="mail_adm" value="<?php if(isset($_POST['mail_adm'])) echo $_POST['mail_adm']; else echo $settings->mail;?>" required=required />
 			<div class="doc-section" id="mediaQueries"></div>
@@ -116,7 +116,7 @@ if (isset($message)) echo '
 		</div>
 		<div class="eleven columns alpha">
 			<br />
-			<hr class="large"/>
+			<hr class="large" />
 			<h3>Messages Personnalisés</h3>
 			<ul class="tabs">
 				<li><a class="active" href="#Maintenance">Maintenance active</a></li>
