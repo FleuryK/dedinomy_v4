@@ -13,7 +13,7 @@ if (isset($message)) echo '
 	?>
 	<form action="#" method="post">
 		<h1>Paramètres de configuration</h1>
-		<hr class="large"/>
+		<hr class="large" />
 		<div class="five columns alpha">
 			<br />
 			<h4>Paramètres du script</h4>
