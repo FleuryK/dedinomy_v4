@@ -195,7 +195,7 @@
 					<p><strong>Pseudo :</strong><br />
 					<input type="text" size="30" name="pseudo" value="'.$userdata->login.'" required=required/></p>
 					<p><strong>Message :</strong>
-					<textarea rows="10" name="message">'; if(isset($_POST['message'])){echo Security::sanitize($_POST['message']);}echo'</textarea>
+					<textarea rows="10" name="message">'; if(isset($_POST['message'])){echo Security::sanitize($_POST['message']);}echo'</textarea></p>
 					<input type="hidden" name="id" value="0" />
 					<button class="button" type="submit">Publier la dédicace</button>
 					</form>';
