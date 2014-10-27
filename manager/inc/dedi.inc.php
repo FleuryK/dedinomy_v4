@@ -130,7 +130,7 @@
 				<input type="submit" name="del" value="Supprimer la sélection" class="button">
 				<table class="striped" cellspacing="0" cellpadding="0">
 				<thead><tr class="alt first last">
-				<th><input name="tout" type="checkbox" onClick="this.value=check(this.form);"/>
+				<th><input name="tout" type="checkbox" onClick="this.value=check(this.form);" />
 				</th>
 				<th><h6>Utilisateur</h6></th>
 				<th><h6>Date</h6></th>
@@ -193,7 +193,7 @@
 		{
 			echo '<form action="" method="post">
 					<p><strong>Pseudo :</strong><br />
-					<input type="text" size="30" name="pseudo" value="'.$userdata->login.'" required=required/></p>
+					<input type="text" size="30" name="pseudo" value="'.$userdata->login.'" required=required /></p>
 					<p><strong>Message :</strong>
 					<textarea rows="10" name="message">'; if(isset($_POST['message'])){echo Security::sanitize($_POST['message']);}echo'</textarea></p>
 					<input type="hidden" name="id" value="0" />
