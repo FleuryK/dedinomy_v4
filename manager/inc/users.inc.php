@@ -24,7 +24,7 @@ if(isset($_POST['NewUser']))
 	{
 		if($_POST['pass'] != $_POST['pass_confirm'])
 		{
-			$error = 'Les 2 mots de passe sont différents.';
+			$error = 'Les 2 mots de passes sont différents.';
 		}
 		else
 		{
@@ -34,23 +34,22 @@ if(isset($_POST['NewUser']))
 				Sql::insert("INSERT INTO ".auth." VALUES('', '". $_POST['login']."', '". md5($_POST['pass'])."','". $_POST['grade']."' )");
 				echo '<div style="width:650px;" class="success message">
 				<h3 style="color:white">L\'utilisateur a bien été ajouté</h3>
-				<p>Le nouvel utilisateur a bien été ajouté à la base de données des utilisateurs.
-				</p>
+				<p>Le nouvel utilisateur a bien été ajouté à la base de données des utilisateurs.</p>
 				</div>';
 			}
 			else
 			{
 				echo $error = '<div style="width:650px;" class="error message">
 				<h3 style="color:white">OhOhOh - Erreur</h3>
-				<p>Ce nom d\'utilisateur est déjà utilisé, merci de bien vouloir le changer./p>
+				<p>Ce nom d\'utilisateur est déjà utilisé, merci de bien vouloir le changer.</p>
 				</div>';
 			}
 		}
 	}
 	else
 	{
-		echo  $error = '<div style="width:650px;" class="error message"><h3 style="color:white">OhOhOH - Erreur</h3>
-		<p>Tous les champs sont obligatoires</p>
+		echo  $error = '<div style="width:650px;" class="error message"><h3 style="color:white">OhOhOh - Erreur</h3>
+		<p>Tous les champs sont obligatoires.</p>
 		</div>';
 	}
 }
@@ -101,14 +100,14 @@ if(isset($_POST['NewUser']))
 					<p>Nom d\'utilisateur :
 						<input type="text" name="login" value="'; if (isset($_POST['login'])) echo $_POST['login']; echo'" required=required/>
 						Mot de passe :<br />
-						<input type="password" name="pass" value="" required=required/>
+						<input type="password" name="pass" value="" required=required />
 						Confirmation du mot de passe :<br />
-						<input type="password" name="pass_confirm" value="" required=required/>
+						<input type="password" name="pass_confirm" value="" required=required />
 					</p>
 					<fieldset>
 						<legend>Rôle du nouvel utilisateur :</legend>
 						<label for="regularRadio">
-							<input type="radio" name="grade" value="1" id="1";/>
+							<input type="radio" name="grade" value="1" id="1"; />
 							<span>Administrateur</span>
 						</label>
 						<label for="secondRegularRadio">
@@ -117,8 +116,7 @@ if(isset($_POST['NewUser']))
 						</label>
 					</fieldset>
 					<input type="hidden" name="NewUser" value="NewUser" />
-					<button class="button" value="submit">Ajouter l\'utilisateur</a>
-					</p>
+					<button class="button" type="submit">Ajouter l\'utilisateur</button>
 				</form>';
 				?>
 			</li>
@@ -170,11 +168,11 @@ else:
 <?php echo'
 	<form action="" method="post" name="profil">
 	Nouveau Mot de passe :<br />
-	<input type="password" name="pass_md5" value="" required=required/>
+	<input type="password" name="pass_md5" value="" required=required />
 	Confirmation du mot de passe :<br />
-	<input type="password" name="pass_confirm" value="" required=required/>
+	<input type="password" name="pass_confirm" value="" required=required />
 	<input type="hidden" name="id_user" value="'.$userdata->id.'" />
 	<input type="hidden" name="pseudo_adm" value="'.$userdata->login.'" />
-	<button class="button" name="profil" value="submit">Mettre à jour mon mot de passe</a>
+	<button class="button" name="profil" value="submit">Mettre à jour mon mot de passe</button>
 	</form>';
 endif;?>
