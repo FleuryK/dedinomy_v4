@@ -69,7 +69,7 @@ if (isset($_POST['newip']))
 		echo '<form action="index.php?pcat=ban" method="post">
 			<p>Adresse IP (ex:102.12.12.1) :
 			<input type="text" name="ip" value="'; if (isset($_POST['ip'])) echo Security::sanitize($_POST['ip']); echo'" required=required/>
-			<a class="button" name="newip" type="submit">Bannir cette IP</a>
+			<button class="button" name="newip" type="submit">Bannir cette IP</button>
 			</p>
 			</form>';?>
 	</li>
