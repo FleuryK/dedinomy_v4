@@ -14,9 +14,9 @@ if (isset($_POST['pseudo']) AND isset($_POST['message']))
 $disable='';
 if($sql->pseudo=="SMS"){$disable='disabled="disabled" ';}
 echo'<form action="#" method="post">
-<label>Pseudo :</strong></label><input type="text" size="30" name="pseudo" value="'.$sql->pseudo.'" '.$disable.' required=required/><br />
+<label>Pseudo :</strong></label><input type="text" size="30" name="pseudo" value="'.$sql->pseudo.'" '.$disable.' required=required /><br />
 <label>Message :</strong></label>
-<input type="text" size="50" name="message" value="'.$sql->message.'" required=required/>
+<input type="text" size="50" name="message" value="'.$sql->message.'" required=required />
 <input type="hidden" name="id" value="'.$sql->id.'" />
-<INPUT type="submit" class="button" value="Modifier la dédicace"/>
+<input type="submit" class="button" value="Modifier la dédicace" />
 </form>';
