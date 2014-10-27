@@ -58,7 +58,7 @@
 	<li data-id="numero6" data-text="Quitter la visite" data-options="tipLocation:top;tipAnimation:fade">
 		<h3 style="color:white;">Et pour finir</h3>
 		<p>Si vous avez des questions, ou suggestions, rendez-vous sur le forum NuBOX.<strong style="color:white"> Nous vous remercions d'avoir suivi notre visite guidée et d'utiliser Dédinomy 4</strong></p>
-		<a href="http://forum.nubox.fr" class="joyride-next-tip small nice radius" target="_blank">Sugestions</a>
+		<a href="http://forum.nubox.fr" class="joyride-next-tip small nice radius" target="_blank">Suggestions</a>
 	</li>
 </ol>
 <script type="text/javascript">
