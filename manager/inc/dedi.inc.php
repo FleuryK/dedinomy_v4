@@ -197,7 +197,7 @@
 					<p><strong>Message :</strong>
 					<textarea rows="10" name="message">'; if(isset($_POST['message'])){echo Security::sanitize($_POST['message']);}echo'</textarea>
 					<input type="hidden" name="id" value="0" />
-					<button class="button" value="submit">Publier la dédicace</a>
+					<button class="button" type="submit">Publier la dédicace</button>
 					</form>';
 		}
 		?>
