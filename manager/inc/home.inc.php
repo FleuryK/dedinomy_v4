@@ -30,7 +30,7 @@
 </div>
 <div class="doc-section" id="attribution">
 	<p class="remove-bottom"><small>Dédinomy, un script de <a href="http://manager.nubox.fr" target="_blank">NuBOX</a>©, 2008-<?php echo date('Y');?><br />
-	Le design est le fruit du travail de <a href="http://twitter.com/blogosite" target="_blank">#blogosite</a> et le développement de la version 5 par <a href="http://www.twitter.com/nubox_dev" target="_blank">#nubox_dev</a>. Toute reproduction, même partielle, est interdite sans l'autorisation de son auteur. Pour toutes questions, ou suggestions, connectez-vous au forum NuBOX - <a id="numero6" href="http://forum.nubox.fr" target="_blank">forum.nubox.fr</a></small></p>.
+	Le design est le fruit du travail de <a href="http://twitter.com/blogosite" target="_blank">#blogosite</a> et le développement de la version 5 par <a href="http://www.twitter.com/nubox_dev" target="_blank">#nubox_dev</a>. Toute reproduction, même partielle, est interdite sans l'autorisation de son auteur. Pour toutes questions, ou suggestions, connectez-vous au forum NuBOX - <a id="numero6" href="http://forum.nubox.fr" target="_blank">forum.nubox.fr</a>.</small></p>
 </div>
 <?php
 //if(Session::exist('first_time') && Session::get('first_time')): Session::set('first_time',false); ?>
