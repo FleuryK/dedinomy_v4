@@ -109,14 +109,14 @@ if(isset($_POST['update']))
 }
 ?>
 <header>
-	<h1>Edition : <?php echo $_GET['theme'];?></h1>
+	<h1>Édition : <?php echo $_GET['theme'];?></h1>
 </header>
 <ul class="tabs">
 	<?php
 	LoadTab($folder);
 	?>
 </ul>
-<form method="POST" action="">
+<form method="post" action="">
 	<ul class="tabs-content">
 		<?php
 		LoadHtml($folder);
