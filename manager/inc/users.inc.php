@@ -98,7 +98,7 @@ if(isset($_POST['NewUser']))
 				echo '
 				<form action="" method="post">
 					<p>Nom d\'utilisateur :
-						<input type="text" name="login" value="'; if (isset($_POST['login'])) echo $_POST['login']; echo'" required=required/>
+						<input type="text" name="login" value="'; if (isset($_POST['login'])) echo $_POST['login']; echo'" required=required />
 						Mot de passe :<br />
 						<input type="password" name="pass" value="" required=required />
 						Confirmation du mot de passe :<br />
