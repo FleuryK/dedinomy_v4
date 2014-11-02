@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `{:db_prefix}_cfg` (
   `nb_aff` int(11) DEFAULT '10',
   `erreur_mod` text,
   `mail` text,
+  `mail2` text,
   `adr_dedi` text,
   `val_dedi` tinyint(1) DEFAULT '0',
   `ca_post` int(11) DEFAULT '24',
