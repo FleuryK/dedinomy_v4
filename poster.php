@@ -34,7 +34,7 @@ if(isset($_POST['pseudo']) AND isset($_POST['message']))
 					{
 						$next=false;
 						$error = $resp->error;
-						$err_code = 'Le code Anti-Spam Entré est incorrect, merci de recommencer !<br /><a href="javascript:history.go(-1)">Retour</a>';
+						$err_code = 'Le code Anti-Spam entré est incorrect, merci de recommencer !<br /><a href="javascript:history.go(-1)">Retour</a>';
 					}
 				}
 				else $next=true;
@@ -67,16 +67,16 @@ if(isset($_POST['pseudo']) AND isset($_POST['message']))
 							$message = Security::sanitize($_POST['message']);
 							$pseudo = Security::sanitize($_POST['pseudo']);
 							Sql::insert('INSERT INTO '.text.' VALUES("", "'.$pseudo.'", "'.$message.'", "'.time().'", "'.$settings->val_dedi.'", "'.$iptrace.'")');
-							$subject = 'Nouvelle Dédicace Sur Votre Site !';
+							$subject = 'Nouvelle dédicace sur votre site !';
 							$headers = 'From: "'.$settings->site.'" <'.$settings->mail.'>'."\n";
 							$headers .= 'Mime-Version: 1.0'."\n";
 							$headers .= 'Content-type: text/html; charset=utf-8'."\n";
-							$msg = '<b>Bonjour,</b><br /><br />Une nouvelle dédicace viens d\'étre envoyée sur votre site :<br /><br />Pseudo : <strong>'.$pseudo.'</strong><br />Dédicace :<strong> '.$message.'</strong><br />IP :<strong> '.$iptrace.'</strong><br />Statut :<strong> '.$validation.'</strong><br /><br />Pour valider, modifier, ou supprimer cette dédicace, rendez-vous dans votre console d\'adminisration.<br /><a href="'.$settings->adr_dedi.'/manager/index.php" target="_blank">Administration</a></font>';
-							mail($settings->mail, $subject, $msg, $headers);
+							$msg = '<span style="font-weight: bold;">Bonjour/Bonsoir,</span><br /><br />Une nouvelle dédicace vient d\'être envoyée sur votre site :<br /><br />Pseudo : <strong>'.$pseudo.'</strong><br />Dédicace : <strong>'.$message.'</strong><br />IP : <strong>'.$iptrace.'</strong><br />Statut : <strong>'.$validation.'</strong><br /><br />Pour valider, modifier, ou supprimer cette dédicace, rendez-vous dans votre console d\'adminisration.<br /><a href="'.$settings->adr_dedi.'/manager/index.php" onclick="window.open(this.href); return false;">Administration des dédicaces</a></font>';
+							mail($settings->mail.', '.$settings->mail2, $subject, $msg, $headers);
 						}
 						else
 						{
-							$err_code='Un des mots de votre Dédicace est interdit - Merci de bien vouloir vérifier votre Dédicace !<br /><a href="javascript:history.go(-1)">Retour</a>';
+							$err_code='Un des mots de votre dédicace est interdit - Merci de bien vouloir vérifier votre dédicace !<br /><a href="javascript:history.go(-1)">Retour</a>';
 						}
 					}
 					else

@@ -56,7 +56,7 @@ if (isset($message)) echo $message; echo'
 	<input type="radio" name="grade" value="2" id="2" ';if ($user->niveau==2) { echo 'checked="checked"'; } echo' />
 	<span>Modérateur</span>
 </label>
-<br/>
+<br />
 <input type="hidden" name="submit" value="Submit" />
 <input type="submit" name="submit" value="Mettre à jour" />
 </form>';

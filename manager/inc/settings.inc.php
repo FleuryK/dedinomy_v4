@@ -3,7 +3,7 @@ Security::is_admin();
 if (isset($_POST['id']))
 {
 	$message = 'Mise à jour effectuée avec succès !';
-	Sql::update("UPDATE ".cfg." SET site='".$_POST['site']."', nb_aff='".$_POST['nb_dedi']."', erreur_mod='".$_POST['int_mod']."', adr_dedi='".$_POST['adr_scr']."', mail='".$_POST['mail_adm']."', msg_mnt='".$_POST['msg_mnt']."', msg_poster_val='".$_POST['msg_poster_val']."', msg_poster='".$_POST['msg_poster']."',val_dedi='".$_POST['val_dedi']."', ca_post='".$_POST['ca_post']."', captcha='".$_POST['captcha']."',api_publish_dedi='".$_POST['api_publish_dedi']."',api_list_dedi='".$_POST['api_list_dedi']."',api_delete_dedi='".$_POST['api_delete_dedi']."',moderation='".$_POST['moderation']."',date_onoff='".$_POST['datetime_status']."',adm_nb_page='".$_POST['adm_nb_page']."' WHERE id='1'");
+	Sql::update("UPDATE ".cfg." SET site='".$_POST['site']."', nb_aff='".$_POST['nb_dedi']."', erreur_mod='".$_POST['int_mod']."', adr_dedi='".$_POST['adr_scr']."', mail='".$_POST['mail_adm']."', mail2='".$_POST['mail_sup']."', msg_mnt='".$_POST['msg_mnt']."', msg_poster_val='".$_POST['msg_poster_val']."', msg_poster='".$_POST['msg_poster']."', val_dedi='".$_POST['val_dedi']."', ca_post='".$_POST['ca_post']."', captcha='".$_POST['captcha']."', recaptcha_theme='".$_POST['recaptcha_theme']."', api_publish_dedi='".$_POST['api_publish_dedi']."', api_list_dedi='".$_POST['api_list_dedi']."', api_delete_dedi='".$_POST['api_delete_dedi']."', moderation='".$_POST['moderation']."', date_onoff='".$_POST['datetime_status']."', adm_nb_page='".$_POST['adm_nb_page']."' WHERE id='1'");
 }
 if (isset($message)) echo '
 	<div style="width:650px; padding-top: 75px;" class="success message">
@@ -59,21 +59,31 @@ if (isset($message)) echo '
 			<h4>Administration</h4>
 			<hr class="large" />
 			<strong>Éléments affichées par page</strong><br />
-			<input type="text" size="30" name="adm_nb_page" value="<?php if (isset($_POST['adm_nb_page'])) echo $_POST['admin_nb_page']; else echo $settings->adm_nb_page;?>" required=required pattern="[0-9]{1,5}" />
-		</div>
+			<input type="text" size="30" name="adm_nb_page" value="<?php if (isset($_POST['adm_nb_page'])) echo $_POST['adm_nb_page']; else echo $settings->adm_nb_page;?>" required=required pattern="[0-9]{1,5}" />
+			<br />
+			<h4>Thème du Captcha</h4>
+			<hr class="large" />
+			<strong>Thème du captcha anti-spam</strong><br />
+			<small>(Thèmes disponibles : <span style="font-weight: bold;">white</span>, <span style="font-weight: bold;">blackglass</span>, <span style="font-weight: bold;">clean</span>, <span style="font-weight: bold;">red</span>)</small>
+			<input type="text" size="30" name="recaptcha_theme" value="<?php if(isset($_POST['recaptcha_theme'])) echo $_POST['recaptcha_theme']; else echo $settings->recaptcha_theme;?>" required=required />
+  		</div>
 		<div class="six columns omega">
 			<br />
 			<h4>Gestion Mail</h4>
 			<hr class="large" />
 			<strong>E-Mail de l'administrateur du site</strong><br />
-			<input type="email" size="30" name="mail_adm" value="<?php if(isset($_POST['mail_adm'])) echo $_POST['mail_adm']; else echo $settings->mail;?>" required=required />
+			<input type="email" size="30" name="mail_adm" value="<?php if(isset($_POST['mail_adm'])) echo $_POST['mail_adm']; else echo $settings->mail;?>" required=required /><br />
+			<strong>Mails supplémentaires qui recevront les notifications</strong><br />
+			<small>(Séparer les mails avec une virgule et <span style="font-weight: bold;">AVEC</span> un espace)</small><br />
+			<input type="text" size="30" name="mail_sup" value="<?php if(isset($_POST['mail_sup'])) echo $_POST['mail_sup']; else echo $settings->mail2;?>" />
 			<div class="doc-section" id="mediaQueries"></div>
 			<br />
-			<h4>Affichage des dédicaces</h4><hr class="large"/>
+			<h4>Affichage des dédicaces</h4>
+			<hr class="large"/>
 			<strong>Nombre de dédicaces affichées</strong><br />
 			<input type="text" size="30" name="nb_dedi" value="<?php if (isset($_POST['nb_dedi'])) echo $_POST['nb_dedi']; else echo $settings->nb_aff;?>" required=required pattern="[0-9]{1,5}" />
 			<fieldset>
-				<legend>Affichage de la date & heure à coté des dédicaces</legend>
+				<legend>Affichage de la date &amp; heure à coté des dédicaces</legend>
 				<label for="regularRadio">
 					<input type="radio" name="datetime_status" value="1" <?php if($settings->date_onoff == 1) { echo 'checked'; }?> />
 					<span>Activé</span>

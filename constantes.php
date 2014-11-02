@@ -20,7 +20,7 @@ function get_ip()
 }
 $iptrace=get_ip();
 $domainName = $_SERVER['HTTP_HOST'];
-$copy='<center><font style="font-family:\'Comic Sans MS\',cursive;font-size:8px;color:#CCC;"><a href="http://manager.nubox.fr" target="_blank">&copy;2008-'.date('Y').'. DédiNomy By NuBOX</a></font></center>';
-$copyAdm='&copy;2008-'.date('Y').'. DédiNomy By <a href="http://manager.nubox.fr" target="_blank">NuBOX</a> | Reproduction interdite même partielle sans autorisation de son auteur.';
+$copy='<div style="text-align: center;"><span style="font-family:\'Comic Sans MS\',cursive;font-size:8px;color:#FFF;"><a href="http://manager.nubox.fr/" onclick="window.open(this.href); return false;">&copy; 2008 - '.date('Y').'. DédiNomy by NuBOX</a></span></div>';
+$copyAdm='&copy; 2008 - '.date('Y').'. DédiNomy by <a href="http://manager.nubox.fr/" onclick="window.open(this.href); return false;">NuBOX</a> | Reproduction interdite même partielle sans autorisation de son auteur.';
 $RecaptchaPubKey="6Lf6SccSAAAAADWTnuki_z54pLgcwwDdgNoz5ccv";
 $RecaptchaPrivKey="6Lf6SccSAAAAAF3Bf761ePBZHgXcCJiOPViJcfYn";
